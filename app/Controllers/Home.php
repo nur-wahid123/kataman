@@ -55,8 +55,8 @@ class Home extends BaseController
         $password = $this->request->getVar('password');
         $userModel = new UserModel();
         $dataUser = $userModel->where('email', $email)->first();
-        if ($dataUser === null) return redirect('/')->with('error', "Maaf Email anda tidak ditemukan");
-        if (!password_verify($password, $dataUser['password'])) return redirect('/')->with('error', "Password yang anda masukkan salah");
+        if ($dataUser === null) return redirect('login')->with('error', "Maaf Email anda tidak ditemukan");
+        if (!password_verify($password, $dataUser['password'])) return redirect('login')->with('error', "Password yang anda masukkan salah");
         session()->set('user', $dataUser);
         return redirect()->back();
     }
