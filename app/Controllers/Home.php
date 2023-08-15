@@ -44,7 +44,7 @@ class Home extends BaseController
         $headers .= "From: Admin Kataman" . "\r\n";
 
         // $message = "Berikut adalah informasi login akun anda\n\nUsername\t: $email\nPassword\t: $password";
-        mail($email, $subject, $message);
+        mail($email, $subject, $message,$headers);
         return redirect('login');
     }
     public function register()
