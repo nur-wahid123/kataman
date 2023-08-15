@@ -33,7 +33,12 @@ class Home extends BaseController
         ];
         $data->insert($newUser);
         $subject = "Pemberitahuan Akun Terhadap email anda";
-        $message = "Berikut adalah informasi login akun anda\n\nUsername\t: $email\nPassword\t: $password";
+        $message = view('registration_email',[
+            'username' => $email,
+            'name' => $nama,
+            'password' => $password,
+        ]);
+        // $message = "Berikut adalah informasi login akun anda\n\nUsername\t: $email\nPassword\t: $password";
         mail($email, $subject, $message);
         return redirect('login');
     }
