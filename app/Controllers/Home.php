@@ -41,7 +41,7 @@ class Home extends BaseController
 
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type: text/html; charset=utf-8" . "\r\n";
-        $headers .= "From: Admin Kataman" . "\r\n";
+        $headers .= "From: indranur@komodo.kencang.id" . "\r\n";
 
         // $message = "Berikut adalah informasi login akun anda\n\nUsername\t: $email\nPassword\t: $password";
         mail($email, $subject, $message,$headers);
