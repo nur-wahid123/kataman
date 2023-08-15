@@ -35,7 +35,7 @@ class Home extends BaseController
         $subject = "Pemberitahuan Akun Terhadap email anda";
         $message = "Berikut adalah informasi login akun anda\n\nUsername\t: $email\nPassword\t: $password";
         mail($email, $subject, $message);
-        return redirect('/login');
+        return redirect('login');
     }
     public function register()
     {
