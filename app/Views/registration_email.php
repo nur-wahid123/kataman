@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Email Template</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Email Registration</title>
 </head>
-<body>
-    <div class="min-h-screen bg-base-200 flex justify-center items-center">
-        <div class="bg-white rounded-lg p-10 shadow-lg">
-            <h1 class="font-bold text-2xl">Hello, <?= $name ?></h1>
-            <p>Kami Menginformasikan bahwa email anda telah memiliki akun pada wedsite kami, silahkan Login Menggunakan akun berikut .</p>
-            <p>Username :<?= $username ?></p>
-            <p>Password : <?= $password ?></p>
-            <p>atau Klik Tombol Di bawah</p>
-            <button class="btn btn-success"><a href="https://kataman.indranurwahid.my.id/login">Masuk</a></button>
-        </div>
+<body style="min-height: 100vh; background-color: #f3f4f6; display: flex; justify-content: center; align-items: center;">
+    <div style="background-color: #ffffff; border-radius: 8px; padding: 20px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+        <h1 style="font-weight: bold; font-size: 24px;">Hello, <?= $name ?></h1>
+        <p>Kami Menginformasikan bahwa email anda telah memiliki akun pada website kami, silahkan Login Menggunakan akun berikut.</p>
+        <p>Username: <?= $username ?></p>
+        <p>Password: <?= $password ?></p>
+        <p>atau Klik Tombol Di bawah</p>
+        <a href="https://kataman.indranurwahid.my.id/login" style="background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 4px;">Masuk</a>
     </div>
 </body>
 </html>
